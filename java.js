@@ -19,7 +19,7 @@ gsap.to ("header", {
 
 if (isMobile.matches) {
 
-  gsap.set(navMenu, { yPercent: 100 });
+  gsap.set(navMenu, { yPercent: 100, opacity: 1 });
 
   const tl = gsap.timeline({ paused: true, reversed: true });
 
@@ -45,6 +45,7 @@ if (isMobile.matches) {
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
 
     tl.reversed() ? tl.play() : tl.reverse();
   });
@@ -59,12 +60,12 @@ buttons.forEach(button => {
   const tl = gsap.timeline({ paused: true });
 
   tl.to(button.querySelectorAll(".char"), {
-    yPercent: -150,
+    yPercent: -200,
     duration: 0.3,
     stagger: 0.03,
   })
   .set(button.querySelectorAll(".char"), {
-    yPercent: 150,
+    yPercent: 200,
   })
   .to(button.querySelectorAll(".char"), {
     yPercent: 0,
