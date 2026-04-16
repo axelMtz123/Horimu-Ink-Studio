@@ -12,7 +12,7 @@ gsap.to ("header", {
   backgroundColor: "rgba(0, 0, 0, 0.8)",
   scrollTrigger: {
     trigger: "header",
-    start: "top top",
+    start: "top 100%",
     scrub: true,
   },
 })
