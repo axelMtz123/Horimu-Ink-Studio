@@ -1253,6 +1253,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: var(--color-bg);
+    padding-top: var(--section-space-md);
 }
 
 .faq-container {
