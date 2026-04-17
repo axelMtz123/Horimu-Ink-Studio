@@ -1,0 +1,141 @@
+
+:root {
+  /* --- Colors --- */
+  --color-text: #FFFFFF;
+  --color-text-alt: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(255, 255, 255, 0.5); 
+  --color-bg: #000000;
+  --color-surface: #FFFFFF;
+  --color-primary: rgba(160, 40, 40, 1);
+  --color-secondary: #503B31;
+
+  /* --- font family --- */
+  --ff-display: 'Playfair Display', sans-serif;
+  --ff-body: 'Noto Serif Japanese', sans-serif;
+
+  /* --- Spacing (8px System) --- */
+
+  --space-8:   clamp(6px, 0.5vw + 4px, 8px);
+  --space-16:  clamp(12px, 1vw + 8px, 16px);
+  --space-24:  clamp(18px, 1.5vw + 12px, 24px);
+  --space-32:  clamp(24px, 2vw + 16px, 32px);
+  --space-40:  clamp(30px, 2.5vw + 20px, 40px);
+  --space-48:  clamp(36px, 3vw + 24px, 48px);
+  --space-64:  clamp(48px, 4vw + 32px, 64px);
+  --space-80:  clamp(60px, 5vw + 40px, 80px);
+  --space-96:  clamp(72px, 6vw + 48px, 96px);
+
+  /* --- Section Spacing --- */
+
+  --section-space-sm: clamp(80px, 10vw + 40px, 160px);  /* Scales to 160px */
+  --section-space-md: clamp(120px, 15vw + 60px, 200px); /* Scales to 200px */
+  --section-space-lg: clamp(160px, 20vw + 80px, 256px); /* Scales to 256px (32*8) */
+
+  /* --- Typography --- */
+
+  --fs-xs: clamp(0.8rem, 0.78rem + 0.1vw, 0.95rem);
+
+  --fs-16: 1rem;
+
+  --fs-20: clamp(1rem, 0.98rem + 0.2vw, 1.25rem);
+
+  --fs-25: clamp(1.1rem, 1.05rem + 0.3vw, 1.56rem);
+
+  --fs-31: clamp(1.25rem, 1.15rem + 0.5vw, 1.94rem);
+
+  --fs-39: clamp(1.4rem, 1.25rem + 0.8vw, 2.44rem);
+
+  --fs-49: clamp(1.6rem, 1.4rem + 1.2vw, 3.06rem);
+
+  --fs-61: clamp(1.9rem, 1.6rem + 1.6vw, 3.81rem);
+
+  --fs-76: clamp(2.2rem, 1.8rem + 2.2vw, 4.75rem);
+
+  --fs-91: clamp(2.6rem, 2rem + 3vw, 5.69rem);
+
+  /* --- Border Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* --- Shadows --- */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-big: 0 12px 24px rgba(0, 0, 0, 0.12);
+
+  /* --- Layout Widths --- */
+  
+  /* 1. Full Screen */
+  --width-full: 100%;
+
+  /* 2. Contained */
+  --width-contained: calc(100% - 128px);
+  
+  /* 3. Standard Max-Width */ 
+  --max-site-width: 1440px; 
+
+  /* Responsive Margin (Mobile safety) */
+  --inline-margin: calc(100% - 64px);
+
+  /* -- Glass texture --*/
+
+  --glass: 
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.25),
+      rgba(255,255,255,0.05)
+    )
+    padding-box,
+    rgba(255,255,255,0.15);
+
+  --glass-border: 1px solid rgba(255,255,255,0.3);
+  --glass-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(10px);
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-sm);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--fs-16);
+  line-height: 1.5;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cell-wide {
+  grid-column: 1 / -1;
+}
