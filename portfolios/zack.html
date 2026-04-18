@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
     <main>
         <section id="portfolio">
-            <div class="portfolio-container">
-                <button class="btn-exit">X</button>
+            <a href="../index.html#ar005-artist" class="btn-exit">X</a>
 
+            <div class="portfolio-container">
                 <div class="cell">
                     <div class="sticky-wrapper">
                         <div class="sticky-card">
                             <h2>Zack Yang</h2>
 
                             <div class="artist-img">
-                                <img src="../assets/images/zack-pfp.png" alt="">
+                                <img src="../assets/images/zack-pfp-port.png" alt="">
                             </div>
 
-                            <div class="social-links">
-                                <a href="">Instagram</a>
+                            <ul class="social-links">
+                                <li><a href="">Instagram</a></li>
 
-                                <a href="">Facebook</a>
-                            </div>
+                                <li>•</li>
 
-                            <button class="btn-var1">Book With Zack</button>
+                                <li><a href="">Facebook</a></li>
+                            </ul>
+
+                            <button class="btn-var1 split">Book With Zack</button>
                         </div>
                     </div>
                 </div>
@@ -40,8 +45,52 @@
                             </div>
 
                             <div class="styles">
-                                
+                                <div class="main-style">
+                                    <h4>Specializes in:</h4>
+
+                                    <p>Main Style</p>
+                                </div>
+
+                                <div class="extra-style">
+                                    <h4>Other Styles:</h4>
+
+                                    <ul>
+                                        <li>Other Style</li>
+
+                                        <li>Other style</li>
+                                    </ul>
+                                </div>
                             </div>
+
+                            <p class="about-text">A dedicated artist focused on creating clean, well-crafted work with strong attention to detail and a consistent, modern style</p>
+                        </div>
+
+                        <div class="work">
+                            <div class="work-title">
+                                <h3>Zack's Work</h3>
+                            </div>
+
+                            <div class="img-container">
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="" class="big-img">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+
+                                <img src="" alt="">
+                            </div>
+
+                            <a class="home-btn" href="#portfolio">Go Back To Top</a>
                         </div>
                     </div>
                 </div>
@@ -52,6 +101,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script src="java.js"></script>
+    <script src="../java.js"></script>
 </body>
 </html>

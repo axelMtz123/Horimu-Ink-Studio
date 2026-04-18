@@ -707,6 +707,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   padding-bottom: var(--section-space-sm);
+  scroll-margin-top: var(--space-96);
 }
 
 .ar005-container {
