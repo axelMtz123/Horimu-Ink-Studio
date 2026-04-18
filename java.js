@@ -1,6 +1,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const split = new SplitType('.split', { types: 'chars' });
+const split = new SplitType('.split', { types: 'chars words lines' });
+
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    setTimeout(() => {
+      const el = document.querySelector(window.location.hash);
+      if (el) {
+        el.scrollIntoView();
+      }
+    }, 100); 
+  }
+});
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -89,7 +100,7 @@ gsap.timeline({
   repeat: -1,
   yoyo: true,
 })
-.to("#about p .char", {
+.to("#about p .word", {
   color: "var(--color-text)",
   duration: 2,
   stagger: 0.02,
