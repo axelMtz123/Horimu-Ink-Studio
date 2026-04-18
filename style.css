@@ -148,6 +148,10 @@ a, button {
 
 /* -- loader -- */
 
+body.loading {
+  overflow: hidden;
+}
+
 #loader {
   position: fixed;
   top: 0;

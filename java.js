@@ -13,6 +13,8 @@ window.addEventListener("load", () => {
   }
 });
 
+document.body.classList.add('loading')
+
 /* --loader --*/
 
 window.addEventListener('load', () => {
@@ -50,6 +52,7 @@ window.addEventListener('load', () => {
     ease: 'power3.inOut'
   })
   .set('#loader', { display: 'none' })
+  tl.call(() => document.body.classList.remove('loading'))
 
   tl.from ("#hero h1 .char", {
     yPercent: 100,
@@ -67,7 +70,7 @@ window.addEventListener('load', () => {
 
   tl.to ("#hero svg", {
     rotation: 360,
-    duration: 0.8,
+    duration: 1,
     ease: 'power2.inOut'
   })
 
