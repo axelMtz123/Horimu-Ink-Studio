@@ -13,6 +13,70 @@ window.addEventListener("load", () => {
   }
 });
 
+/* --loader --*/
+
+window.addEventListener('load', () => {
+  const counter = document.getElementById('loader-count')
+  const tl = gsap.timeline()
+
+  const isMobile = window.innerWidth <= 600
+
+  const increments = [0, 17, 34, 58, 72, 89, 100]
+  const positions = isMobile 
+    ? ['0vw', '5vw', '15vw', '25vw', '35vw', '45vw', '55vw']
+    : ['0vw', '10vw', '25vw', '45vw', '55vw', '65vw', '70vw']
+
+  increments.forEach((num, i) => {
+    tl.to('#loader-count', {
+        x: positions[i],
+        duration: 0.6 + Math.random() * 0.6,
+        ease: 'power2.inOut',
+        onStart: () => {
+          gsap.to(counter, {
+            opacity: 0,
+            duration: 0.15,
+            onComplete: () => {
+              counter.textContent = num
+              gsap.to(counter, { opacity: 1, duration: 0.15 })
+            }
+          })
+        }
+      })
+  })
+
+  tl.to('#loader', {
+    x: '-100%',
+    duration: 0.8,
+    ease: 'power3.inOut'
+  })
+  .set('#loader', { display: 'none' })
+
+  tl.from ("#hero h1 .char", {
+    yPercent: 100,
+    duration: 0.8,
+    ease: "power3.inOut",
+    stagger: 0.06
+  }) 
+
+  tl.from ("#hero h2 .char", {
+    yPercent: 100,
+    duration: 0.8,
+    ease: "power3.inOut",
+    stagger: 0.06
+  }, "<")
+
+  tl.to ("#hero svg", {
+    rotation: 360,
+    duration: 0.8,
+    ease: 'power2.inOut'
+  })
+
+  tl.from (".hero-text", {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.inOut"
+  }, "<")
+})
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navItems = document.querySelectorAll(".nav-menu li");
