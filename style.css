@@ -146,6 +146,13 @@ a, button {
   cursor: none;
 }
 
+.reveal-3d {
+  display: inline-block;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
 /* -- loader -- */
 
 body.loading {
@@ -687,6 +694,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: end;
+  gap: var(--space-24);
 }
 
 .main-img p {
@@ -1077,7 +1085,7 @@ nav {
     gap: var(--space-8);
 }
 
-.contact-row h3 {
+.contact-row-title h3 {
     font-size: var(--fs-25);
     font-family: var(--ff-display);
     font-weight: 200;
@@ -1113,6 +1121,74 @@ nav {
     border: none;
 }
 
+.booking-form {
+  width: 100%;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inputs */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: transparent;
+  border: 1px solid #333;
+  padding: var(--space-16);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  outline: none;
+  font-size: 14px;
+}
+
+select option {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.booking-form textarea,
+.upload-box, .booking-form button {
+  grid-column: span 2;
+}
+
+.booking-form button {
+  max-width: 400px;
+  display: flex;
+  justify-self: center
+}
+
+/* textarea height */
+.booking-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Upload box */
+.upload-box {
+  border: 2px dashed #333;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-box p {
+  color: var(--color-text-alt);
+  font-size: 13px;
+  margin: 0;
+}
+
+.upload-box input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 @media (max-width: 1000px) {
     .contact-container {
         max-width: var(--inline-margin);
@@ -1135,6 +1211,24 @@ nav {
 
     .contact-title p {
         font-size: var(--fs-25);
+    }
+
+    .booking-form {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding: 0;
+      row-gap: var(--space-24);
+    }
+
+    .booking-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-24);
+    }
+
+    .booking-form textarea,
+    .upload-box, .booking-form button {
+      grid-column: span 1;
     }
 }
 

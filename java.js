@@ -80,6 +80,30 @@ window.addEventListener('load', () => {
     ease: "power3.inOut"
   }, "<")
 })
+
+gsap.utils.toArray(".reveal-3d").forEach((el) => {
+  gsap.fromTo(
+    el,
+    {
+      y: 120,
+      opacity: 0,
+      rotateX: 55,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      rotateX: 0,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play reverse play reverse",
+      }
+    }
+  );
+});
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navItems = document.querySelectorAll(".nav-menu li");
