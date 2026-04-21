@@ -1435,8 +1435,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: var(--space-32);
-    transition: all .5s ease;
-    cursor: pointer;
 }
 
 .faq-title {
@@ -1460,11 +1458,8 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0 var(--fs-76);
-}
-
-.faq-cell:hover {
-  padding: var(--space-40);
+  gap: var(--space-24);
+  padding: var(--space-32) 0;
 }
 
 #faq h3 {

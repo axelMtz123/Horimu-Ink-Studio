@@ -13,11 +13,23 @@ window.addEventListener("load", () => {
   }
 });
 
-document.body.classList.add('loading')
 
 /* --loader --*/
+if (document.getElementById('loader')) {
+  document.body.classList.add('loading')
+}
 
 window.addEventListener('load', () => {
+  const hasLoaded = sessionStorage.getItem('hasLoaded')
+
+  if (hasLoaded) {
+    document.getElementById('loader').style.display = 'none'
+    document.body.classList.remove('loading')
+    return
+  }
+
+  sessionStorage.setItem('hasLoaded', 'true')
+
   const counter = document.getElementById('loader-count')
   const tl = gsap.timeline()
 
@@ -30,20 +42,20 @@ window.addEventListener('load', () => {
 
   increments.forEach((num, i) => {
     tl.to('#loader-count', {
-        x: positions[i],
-        duration: 0.6 + Math.random() * 0.6,
-        ease: 'power2.inOut',
-        onStart: () => {
-          gsap.to(counter, {
-            opacity: 0,
-            duration: 0.15,
-            onComplete: () => {
-              counter.textContent = num
-              gsap.to(counter, { opacity: 1, duration: 0.15 })
-            }
-          })
-        }
-      })
+      x: positions[i],
+      duration: 0.6 + Math.random() * 0.6,
+      ease: 'power2.inOut',
+      onStart: () => {
+        gsap.to(counter, {
+          opacity: 0,
+          duration: 0.15,
+          onComplete: () => {
+            counter.textContent = num
+            gsap.to(counter, { opacity: 1, duration: 0.15 })
+          }
+        })
+      }
+    })
   })
 
   tl.to('#loader', {
@@ -52,29 +64,29 @@ window.addEventListener('load', () => {
     ease: 'power3.inOut'
   })
   .set('#loader', { display: 'none' })
-  tl.call(() => document.body.classList.remove('loading'))
+  .call(() => document.body.classList.remove('loading'))
 
-  tl.from ("#hero h1 .char", {
+  tl.from("#hero h1 .char", {
     yPercent: 100,
     duration: 0.8,
     ease: "power3.inOut",
     stagger: 0.06
-  }) 
+  })
 
-  tl.from ("#hero h2 .char", {
+  tl.from("#hero h2 .char", {
     yPercent: 100,
     duration: 0.8,
     ease: "power3.inOut",
     stagger: 0.06
   }, "<")
 
-  tl.to ("#hero svg", {
+  tl.to("#hero svg", {
     rotation: 360,
     duration: 1,
     ease: 'power2.inOut'
   })
 
-  tl.from (".hero-text", {
+  tl.from(".hero-text", {
     opacity: 0,
     duration: 0.8,
     ease: "power3.inOut"
@@ -84,11 +96,7 @@ window.addEventListener('load', () => {
 gsap.utils.toArray(".reveal-3d").forEach((el) => {
   gsap.fromTo(
     el,
-    {
-      y: 120,
-      opacity: 0,
-      rotateX: 55,
-    },
+    { y: 120, opacity: 0, rotateX: 55 },
     {
       y: 0,
       opacity: 1,
@@ -101,8 +109,8 @@ gsap.utils.toArray(".reveal-3d").forEach((el) => {
         toggleActions: "play reverse play reverse",
       }
     }
-  );
-});
+  )
+})
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
