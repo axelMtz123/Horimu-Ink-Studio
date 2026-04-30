@@ -912,6 +912,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .ar005-cell:hover {
+      padding: 0 !important;
+    }
+
     .ar005-title h2{
         padding: 0;
         font-size: var(--fs-39);
