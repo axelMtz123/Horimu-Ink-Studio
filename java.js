@@ -206,3 +206,15 @@ gsap.timeline({
   opacity: 1,
   ease: "power2.inOut"
 });
+
+/* booking form */ 
+
+const params = new URLSearchParams(window.location.search);
+const artist = params.get("artist");
+
+if (artist) {
+  const select = document.querySelector("#artistSelect");
+  if (select) {
+    select.value = artist;
+  }
+}

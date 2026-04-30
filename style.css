@@ -155,7 +155,6 @@ a, button {
 
 /* -- loader -- */
 
-/*
 body.loading {
   overflow: hidden;
 }
@@ -185,9 +184,6 @@ body.loading {
     margin-bottom: var(--section-space-sm);
   }
 }
-*/
-
-
 
 /* universal header */
 
@@ -904,6 +900,7 @@ nav {
     height: 100%;
     object-fit: cover;
     background-color: gray;
+    border-radius: 4px;
 }
 
 .ar005-cell:hover {
@@ -1174,7 +1171,7 @@ nav {
     border: none;
 }
 
-.booking-form {
+#booking-form {
   width: 100%;
   padding: 25px;
   display: grid;
@@ -1185,9 +1182,9 @@ nav {
 }
 
 /* Inputs */
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
+#booking-form input,
+#booking-form select,
+#booking-form textarea {
   background: transparent;
   border: 1px solid #333;
   padding: var(--space-16);
@@ -1202,19 +1199,19 @@ select option {
   color: var(--color-text);
 }
 
-.booking-form textarea,
-.upload-box, .booking-form button {
+#booking-form textarea,
+.upload-box, #booking-form button {
   grid-column: span 2;
 }
 
-.booking-form button {
+#booking-form button {
   max-width: 400px;
   display: flex;
   justify-self: center
 }
 
 /* textarea height */
-.booking-form textarea {
+#booking-form textarea {
   min-height: 120px;
   resize: vertical;
 }
@@ -1266,7 +1263,7 @@ select option {
         font-size: var(--fs-25);
     }
 
-    .booking-form {
+    #booking-form {
       grid-template-columns: 1fr;
       width: 100%;
       padding: 0;
@@ -1279,8 +1276,8 @@ select option {
       gap: var(--space-24);
     }
 
-    .booking-form textarea,
-    .upload-box, .booking-form button {
+    #booking-form textarea,
+    .upload-box, #booking-form button {
       grid-column: span 1;
     }
 }
