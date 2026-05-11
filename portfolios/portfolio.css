@@ -148,7 +148,7 @@ a, button {
 
 #portfolio {
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -399,6 +399,7 @@ a, button {
 
   .img-container {
     min-height: auto;
+    height: 100%;
     max-width: 100%;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     grid-template-rows: repeat(6, minmax(150px, 1fr));
