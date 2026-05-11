@@ -398,6 +398,7 @@ a, button {
   }
 
   .img-container {
+    min-height: auto;
     max-width: 100%;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     grid-template-rows: repeat(6, minmax(150px, 1fr));
