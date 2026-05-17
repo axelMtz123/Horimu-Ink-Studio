@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horimu Ink Tattoo Studio | Houston TX Custom Tattoos</title>
     <meta name="description" content="Horimu Ink is a custom tattoo studio in Houston TX specializing in fine line, realism, and Japanese tattoos. Located at 6833 W Sam Houston Pkwy S #203.">
+    <meta property="og:title" content="Horimu Ink Tattoo Studio | Houston TX Custom Tattoos">
+    <meta property="og:description" content="Custom tattoo studio in Houston TX specializing in fine line, realism, and Japanese tattoos. Located at 6833 W Sam Houston Pkwy S #203.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://horimu-ink-studio.vercel.app/">
+    <meta property="og:image" content="https://horimu-ink-studio.vercel.app/assets/hero-bg.png">
+
     <link rel="canonical" href="https://horimu-ink-studio.vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -466,7 +472,7 @@
                 <div class="t003-title">
                     <h2>A Word From Our Clients</h2>
 
-                    <p>studio name takes pride in meeting all clients expectations</p>
+                    <p>Horimu Ink takes pride in meeting all clients expectations</p>
                 </div>
 
                 <div class="t003-content">
@@ -697,10 +703,10 @@
                         </a>
                         
                         <ul>
-                            <li><a href="faq.html#faq1">What Should I Bring</a></li>
-                            <li><a href="faq.html#faq2">How Do I Prepare</a></li>
-                            <li><a href="faq.html#faq3">Aftercare Basics</a></li>
-                            <li><a href="faq.html#faq4">Does It Hurt</a></li>
+                            <li><a href="faq.html#booking-question">What Should I Bring</a></li>
+                            <li><a href="faq.html#prepare-question">How Do I Prepare</a></li>
+                            <li><a href="faq.html#aftercare-question">Aftercare Basics</a></li>
+                            <li><a href="faq.html#pain-question">Does It Hurt</a></li>
                         </ul>
                     </div>
 
@@ -716,8 +722,21 @@
     {
         "@context": "https://schema.org",
         "@type": "TattooParlor",
+
         "name": "Horimu Ink",
+
         "image": "https://horimu-ink-studio.vercel.app/assets/hero-bg.png",
+
+        "url": "https://horimu-ink-studio.vercel.app/",
+
+        "telephone": "832-863-0883",
+
+        "priceRange": "$$",
+
+        "sameAs": [
+            "https://www.instagram.com/horimuinktattoostudio/"
+        ],
+
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "6833 W Sam Houston Pkwy S #203",
@@ -726,7 +745,29 @@
             "postalCode": "77044",
             "addressCountry": "US"
         },
-        "telephone": "832-863-0883",
+
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Wednesday",
+                    "Thursday",
+                    "Sunday"
+                ],
+                "opens": "12:00",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "12:00",
+                "closes": "22:00"
+            }
+        ],
 
         "aggregateRating": {
             "@type": "AggregateRating",
@@ -736,40 +777,55 @@
 
         "review": [
             {
-            "@type": "Review",
-            "author": "Johann Rodriguez",
-            "reviewBody": "Zach was an amazing dude! It was my first time getting a tattoo and he made me feel welcomed and it turned out amazing.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-            }
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Johann Rodriguez"
+                },
+                "reviewBody": "Zach was an amazing dude! It was my first time getting a tattoo and he made me feel welcomed and it turned out amazing.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
             },
+
             {
-            "@type": "Review",
-            "author": "Nichole Ramirez",
-            "reviewBody": "The shop is comfortable and the process was smooth. Good vibes, good music, great artist.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-            }
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Nichole Ramirez"
+                },
+                "reviewBody": "The shop is comfortable and the process was smooth. Good vibes, good music, great artist.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
             },
+
             {
-            "@type": "Review",
-            "author": "Leonardo Vega",
-            "reviewBody": "Best person I trust with tattoos. Always great work and consistency.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-            }
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Leonardo Vega"
+                },
+                "reviewBody": "Best person I trust with tattoos. Always great work and consistency.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
             },
+
             {
-            "@type": "Review",
-            "author": "Jordi Hernandez",
-            "reviewBody": "30+ hours on a Japanese sleeve and amazing results. Great service and quality work.",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-            }
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jordi Hernandez"
+                },
+                "reviewBody": "30+ hours on a Japanese sleeve and amazing results. Great service and quality work.",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
             }
         ]
     }
